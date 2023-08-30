@@ -22,25 +22,32 @@ int main()
 	fflush(stdin);
 	fflush(stdout);
 	scanf("%f %f",&x, &y);
-	if(c == '+')
+	switch (c)
 	{
-		printf("%f + %f = %f\n",x,y, x+y);
+		case '+':
+		{
+			printf("%f + %f = %f\n",x,y, x+y);
+			break;
+		}
+		case '-':
+		{
+			printf("%f - %f = %f\n",x,y, x-y);
+			break;
+		}
+		case '*':
+		{
+			printf("%f * %f = %f\n",x,y, x*y);
+			break;
+		}
+		case '/':
+		{
+			printf("%f / %f = %f\n",x,y, x/y);
+			break;
+		}
+		default:
+		{
+		printf("wrong input\n");
+		break;
+		}
 	}
-	else if(c == '-')
-	{
-		printf("%f - %f = %f\n",x,y, x-y);
-	}
-	else if(c == '*')
-	{
-		printf("%f * %f = %f\n",x,y, x*y);
-	}
-	else if(c == '/')
-	{
-		printf("%f / %f = %f\n",x,y, x/y);
-	}
-	else
-	{
-		printf("wrong input\f");
-	}
-
 }
